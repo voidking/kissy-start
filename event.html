@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+</head>
+<body>
+    <p><button id="click-me">Click Me</button></p>
+    <p id="banner-msg" style="display: none;">风吹乱了我的秀发，连老天都嫉妒我的俊美。</p>
+<script src="./lib/kissy-1.4.7/build/seed.js"></script>
+<script>
+KISSY.use('node',function(S,Node){
+    Node.one('#click-me').on('click',function(e){
+        Node.one('#banner-msg').show();
+    });
+});
+</script>
+</body>
+</html>

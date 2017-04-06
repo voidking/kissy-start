@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+<body>
+    <p>温度为：<span id="weather-con"></span></p>
+<script src="./lib/kissy-1.4.7/build/seed.js"></script>
+<script>
+KISSY.use('io,node',function(S,io,Node){
+    io({
+        url:'./data/ajax-data.json',
+        data:{
+            zipcode:10010
+        },
+        success:function(data){
+            Node.one('#weather-con').html('<em>' + data.weather + '</em> 摄氏度');
+        }
+    });
+});
+</script>
+</body>
+</html>

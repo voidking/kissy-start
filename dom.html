@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>dom</title>
+</head>
+<body>
+    <p><button class="continue">hello</button></p>
+<script src="./lib/kissy-1.4.7/build/seed.js"></script>
+<script>
+KISSY.use('node',function(S,Node){
+    Node.one('button.continue').html('Hello Kissy!');
+});
+</script>
+</body>
+</html>
